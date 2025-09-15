@@ -161,28 +161,6 @@
       color: #777;
     }
 
-    main {
-  display: flex;
-  gap: 20px;
-  align-items: flex-start; /* skills card নিচে নামবে না */
-}
-
-.content {
-  flex: 2;
-}
-
-.skills {
-  flex: 1;
-}
-
-.skills .card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-
     /* Responsive */
     @media (max-width: 860px) {
       main {
@@ -253,17 +231,33 @@
     </div>
 
     <!-- Right Sidebar -->
-    <aside class="skills">
-    <div class="card">
-      <h2>Skills</h2>
-      <p><strong>Languages & Frameworks</strong><br>Java · PHP · C</p>
-      <p><strong>Databases</strong><br>MySQL</p>
-      <p><strong>Testing Tools</strong><br>Selenium · Appium · Postman · TestRail · Jira · Kibana</p>
-      <p><strong>Testing Types</strong><br>Manual · Regression · UI · API · Sanity · Smoke · UAT</p>
-      <p><strong>Version Control / CI</strong><br>Git</p>
-      <p><strong>Other</strong><br>Requirement Analysis · Analytical Skills</p>
-    </div>
-  </aside>
+    <aside>
+      <div class="aside-card">
+        <h2>Skills</h2>
+        <dl>
+          <dt>Languages & Frameworks</dt>
+          <dd>Java · PHP · C</dd>
+
+          <dt>Databases</dt>
+          <dd>MySQL</dd>
+
+          <dt>Testing Tools</dt>
+          <dd>Selenium · Appium · Postman · TestRail · Jira · Kibana</dd>
+
+          <dt>Testing Types</dt>
+          <dd>Manual · Regression · UI · API · Sanity · Smoke · UAT</dd>
+
+          <dt>Version Control / CI</dt>
+          <dd>Git</dd>
+
+          <dt>Other</dt>
+          <dd>Requirement Analysis · Analytical Skills</dd>
+        </dl>
+        <div style="margin-top:8px">
+          <a class="btn btn-outline" href="mailto:sahimalam96@gmail.com">Email</a>
+        </div>
+      </div>
+    </aside>
   </main>
 
   <footer>
