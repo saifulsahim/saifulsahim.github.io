@@ -13,7 +13,7 @@
       --accent: #2563eb;
       --border: #e6eef8;
     }
-    *{box-sizing:border-box}
+    * { box-sizing:border-box; }
     body {
       margin:0;
       font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
@@ -38,19 +38,32 @@
       align-items:center;
       justify-content:space-between;
       padding:24px;
+      gap:20px;
+    }
+    .profile-pic {
+      flex-shrink:0;
+    }
+    .profile-pic img {
+      width:120px;
+      height:120px;
+      border-radius:50%;
+      border:3px solid var(--accent);
+      object-fit:cover;
     }
     .head-info {
       flex:1;
+      min-width:250px;
     }
     .name {
-      font-size:26px;
-      margin:0 0 8px 0;
+      font-size:28px;
+      margin:0 0 6px 0;
       font-weight:700;
     }
     .role {
       margin:0;
       color:var(--muted);
-      font-size:16px;
+      font-size:17px;
+      font-weight:500;
     }
     .contact {
       margin-top:10px;
@@ -67,15 +80,21 @@
       text-decoration:none;
       font-weight:600;
       margin-right:8px;
+      transition:0.2s;
     }
     .btn-primary {
       background:var(--accent);
       color:#fff;
     }
+    .btn-primary:hover { background:#1d4ed8; }
     .btn-outline {
       border:1px solid var(--border);
       color:var(--muted);
       background:transparent;
+    }
+    .btn-outline:hover {
+      border-color:var(--accent);
+      color:var(--accent);
     }
     main {
       display:grid;
@@ -86,12 +105,13 @@
     }
     @media(max-width:860px) {
       main { grid-template-columns:1fr; }
+      .header { flex-direction:column; text-align:center; }
     }
     section { margin-bottom:20px; }
-    h2 { font-size:18px; margin:0 0 12px 0; }
+    h2 { font-size:20px; margin:0 0 12px 0; }
     p.lead { color:var(--muted); margin:0 0 10px 0; line-height:1.6; }
     ul { margin:0; padding-left:20px; }
-    ul li { margin-bottom:6px; }
+    ul li { margin-bottom:6px; line-height:1.5; }
     .job {
       background:#fff;
       border:1px solid var(--border);
@@ -113,13 +133,18 @@
       text-align:center;
       color:var(--muted);
       font-size:13px;
+      border-top:1px solid var(--border);
     }
   </style>
 </head>
 <body>
   <div class="container">
     <div class="card">
+      <!-- Header with Photo -->
       <div class="header">
+        <div class="profile-pic">
+          <img src="white_background.jpg" alt="Profile Photo">
+        </div>
         <div class="head-info">
           <h1 class="name">Sk. Md. Saiful Alam</h1>
           <div class="role">SQA Engineer</div>
@@ -135,7 +160,9 @@
         </div>
       </div>
 
+      <!-- Body -->
       <main>
+        <!-- Left -->
         <div>
           <section id="summary">
             <h2>Summary</h2>
@@ -200,6 +227,7 @@
           </section>
         </div>
 
+        <!-- Right -->
         <aside>
           <div class="aside-card">
             <h2>Skills</h2>
@@ -217,7 +245,7 @@
               <dd>Manual · Regression · UI · API · Sanity · Smoke · UAT</dd>
 
               <dt>Version Control / CI</dt>
-              <dd>Git </dd>
+              <dd>Git</dd>
 
               <dt>Other</dt>
               <dd>Requirement Analysis · Analytical Skills</dd>
