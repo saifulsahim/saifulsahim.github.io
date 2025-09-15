@@ -18,13 +18,12 @@
       font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
       background: var(--bg);
       color: #0f1724;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
     }
     .wrap{
       width:100%;
       margin:0 auto;
       padding:20px;
+      max-width:1200px;
     }
     .card{
       background:var(--card);
@@ -46,24 +45,19 @@
       border-radius:12px;
       overflow:hidden;
       border:1px solid #e2e8f0;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      background:#fff;
     }
-    .photo img{width:100%;height:100%;object-fit:cover;display:block}
+    .photo img{width:100%;height:100%;object-fit:cover}
     .head-info{flex:1;min-width:250px}
-    .name{font-size:26px;margin-bottom:6px;font-weight:700}
+    .name{font-size:28px;margin-bottom:6px;font-weight:700}
     .role{margin:0;color:var(--muted);font-size:18px}
     .contact{margin-top:10px;color:var(--muted);font-size:14px}
-    .buttons{margin-top:12px}
     .btn{
       display:inline-block;
       padding:10px 16px;
       border-radius:8px;
       text-decoration:none;
       font-weight:600;
-      margin-right:8px;
+      margin:6px 6px 0 0;
       transition: all .2s ease-in-out;
     }
     .btn-primary{background:var(--accent);color:#fff}
@@ -83,19 +77,38 @@
       .photo{flex:0 0 120px;height:120px}
     }
 
-    section{margin-bottom:16px}
-    h2{font-size:18px;margin-bottom:10px;color:#0f1724}
-    p.lead{color:var(--muted);margin-bottom:8px;line-height:1.5}
+    section{margin-bottom:20px}
+    h2{font-size:20px;margin-bottom:12px;color:#0f1724}
+
+    /* Job card */
     .job{
       background:#fff;
       border:1px solid var(--border);
-      padding:14px;
-      border-radius:8px;
-      margin-bottom:12px
+      padding:16px;
+      border-radius:10px;
+      margin-bottom:14px;
+      display:flex;
+      gap:14px;
+      align-items:flex-start;
     }
+    .job-logo{
+      flex:0 0 50px;
+      height:50px;
+      border-radius:6px;
+      overflow:hidden;
+      border:1px solid #e2e8f0;
+      background:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+    }
+    .job-logo img{width:100%;height:100%;object-fit:contain}
+    .job-content{flex:1}
     .job h3{margin:0;font-size:16px;font-weight:600}
-    .job .meta{color:var(--muted);font-size:13px;margin-top:6px}
+    .job .meta{color:var(--muted);font-size:13px;margin:4px 0 8px 0}
+    .job ul{margin-left:18px;color:var(--muted);line-height:1.5}
 
+    /* Sidebar */
     aside{padding:6px}
     .aside-card{
       background:#fff;
@@ -128,7 +141,7 @@
           <div class="contact">
             <span>Email: <a href="mailto:sahimalam96@gmail.com">sahimalam96@gmail.com</a></span> ·
             <span>Phone: +8801672412645</span>
-            <div style="margin-top:8px">
+            <div>
               <a class="btn btn-primary" href="Sk_Md_Saiful_Alam_Resume.pdf" target="_blank">Download Resume</a>
               <a class="btn btn-outline" href="https://github.com/saifulsahim" target="_blank">GitHub</a>
               <a class="btn btn-outline" href="https://www.linkedin.com/in/saifulsahim/" target="_blank">LinkedIn</a>
@@ -141,36 +154,71 @@
         <div>
           <section id="summary">
             <h2>Summary</h2>
-            <p class="lead">Detail-oriented Software QA Engineer with 3+ years of experience in manual and automated testing for mobile and web applications. Skilled in designing test strategies, identifying defects, and collaborating with cross-functional teams to ensure seamless user experiences. Proven track record in testing high-scale applications (10M+ users) and improving release stability through effective QA practices.</p>
+            <p style="color:#475569;line-height:1.6">
+              Detail-oriented Software QA Engineer with 3+ years of experience in manual and automated testing for mobile and web applications. 
+              Skilled in designing test strategies, identifying defects, and collaborating with cross-functional teams to ensure seamless user experiences. 
+              Proven track record in testing high-scale applications (10M+ users) and improving release stability through effective QA practices.
+            </p>
           </section>
 
           <section id="projects">
             <h2>Selected Experience</h2>
 
             <div class="job">
-              <h3>SQA Engineer — Portonics Limited (Remote, Dhaka)</h3>
-              <div class="meta"><em>Oct 2024 – Present</em></div>
-              <p class="lead">Performed end-to-end testing of ATOM Store app (Top-Up, Pack Purchase, Roaming, In-app Games). API testing with Postman, regression & sanity tests, TestRail for cases, Jira & Kibana for bug tracking and logs.</p>
+              <div class="job-logo"><img src="company1.png" alt="Portonics"></div>
+              <div class="job-content">
+                <h3>SQA Engineer — Portonics Limited (Remote, Dhaka)</h3>
+                <div class="meta"><em>Oct 2024 – Present</em></div>
+                <ul>
+                  <li>Performed end-to-end testing of ATOM Store app (Top-Up, Pack Purchase, Roaming, In-app Games)</li>
+                  <li>API testing with Postman</li>
+                  <li>Regression & sanity testing</li>
+                  <li>Used TestRail for test cases</li>
+                  <li>Bug tracking & logs with Jira and Kibana</li>
+                </ul>
+              </div>
             </div>
 
             <div class="job">
-              <h3>SQA Engineer — Bit Mascot (Pvt) Ltd (Dhaka)</h3>
-              <div class="meta"><em>May 2023 – Sep 2024</em></div>
-              <p class="lead">Tested Eventbookings web & mobile platforms, designed test plans, reported bugs in Jira, performed API testing, and participated in Agile ceremonies.</p>
+              <div class="job-logo"><img src="company2.png" alt="Bit Mascot"></div>
+              <div class="job-content">
+                <h3>SQA Engineer — Bit Mascot (Pvt) Ltd (Dhaka)</h3>
+                <div class="meta"><em>May 2023 – Sep 2024</em></div>
+                <ul>
+                  <li>Tested Eventbookings web & mobile platforms</li>
+                  <li>Designed test plans and reported bugs in Jira</li>
+                  <li>Performed API testing</li>
+                  <li>Actively participated in Agile ceremonies</li>
+                </ul>
+              </div>
             </div>
 
             <div class="job">
-              <h3>Software Engineer — Tappware Solutions Ltd (Dhaka)</h3>
-              <div class="meta"><em>Aug 2020 – Sep 2021</em></div>
-              <p class="lead">Worked on Govt. E-nothi (CakePHP, jQuery, AJAX). Developed features, integrated APIs, fixed bugs, and updated client-requested features.</p>
+              <div class="job-logo"><img src="company3.png" alt="Tappware"></div>
+              <div class="job-content">
+                <h3>Software Engineer — Tappware Solutions Ltd (Dhaka)</h3>
+                <div class="meta"><em>Aug 2020 – Sep 2021</em></div>
+                <ul>
+                  <li>Worked on Govt. E-nothi project (CakePHP, jQuery, AJAX)</li>
+                  <li>Developed new features and integrated APIs</li>
+                  <li>Fixed bugs and optimized performance</li>
+                  <li>Implemented client-requested updates</li>
+                </ul>
+              </div>
             </div>
 
             <div class="job">
-              <h3>SQA Engineer — Tappware Solutions Ltd (Dhaka)</h3>
-              <div class="meta"><em>Sep 2019 – Jul 2020</em></div>
-              <p class="lead">Quality assurance for E-nothi web & mobile, created test cases, tracked and reported defects, collaborated with devs for stability improvements.</p>
+              <div class="job-logo"><img src="company3.png" alt="Tappware"></div>
+              <div class="job-content">
+                <h3>SQA Engineer — Tappware Solutions Ltd (Dhaka)</h3>
+                <div class="meta"><em>Sep 2019 – Jul 2020</em></div>
+                <ul>
+                  <li>Quality assurance for E-nothi web & mobile</li>
+                  <li>Created test cases & tracked defects</li>
+                  <li>Collaborated with developers for release stability</li>
+                </ul>
+              </div>
             </div>
-
           </section>
 
           <section id="education">
