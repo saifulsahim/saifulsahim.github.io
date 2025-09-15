@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sk. Md. Saiful Alam — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --muted: #475569;
+      --accent: #2563eb;
+      --border: #e6eef8;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: var(--bg);
+      color: #0f1724;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+    .wrap{max-width:960px;margin:28px auto;padding:20px}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:12px;box-shadow: 0 6px 18px rgba(15,23,36,0.06);overflow:hidden}
+    .header{
+      display:flex;gap:20px;align-items:center;padding:22px;
+      flex-wrap:wrap;
+    }
+    .photo{
+      flex:0 0 140px;height:140px;border-radius:12px;overflow:hidden;border:1px solid #e2e8f0;
+      display:flex;align-items:center;justify-content:center;background:#fff;
+    }
+    .photo img{width:100%;height:100%;object-fit:cover;display:block}
+    .head-info{flex:1;min-width:200px}
+    .name{font-size:22px;margin:0 0 6px 0;font-weight:700}
+    .role{margin:0;color:var(--muted)}
+    .contact{margin-top:10px;color:var(--muted);font-size:14px}
+    .buttons{margin-top:12px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600;margin-right:8px}
+    .btn-primary{background:var(--accent);color:#fff}
+    .btn-outline{border:1px solid var(--border);color:var(--muted);background:transparent}
+
+    main{display:grid;grid-template-columns:1fr 300px;gap:20px;padding:22px;border-top:1px solid var(--border)}
+    @media (max-width:860px){ main{grid-template-columns:1fr;padding:16px} .photo{flex:0 0 110px;height:110px} }
+
+    section{margin-bottom:12px}
+    h2{font-size:16px;margin:0 0 10px 0;color:#0f1724}
+    p.lead{color:var(--muted);margin:0 0 8px 0}
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{background:#eef2ff;padding:6px 8px;border-radius:8px;font-size:13px;color:#0f1724}
+
+    .job{background:#fff;border:1px solid var(--border);padding:12px;border-radius:8px;margin-bottom:10px}
+    .job h3{margin:0;font-size:15px}
+    .job .meta{color:var(--muted);font-size:13px;margin-top:6px}
+
+    aside{padding:6px}
+    .aside-card{background:#fff;border:1px solid var(--border);padding:14px;border-radius:10px}
+    .aside-card dt{color:var(--muted);font-size:13px}
+    .aside-card dd{margin:6px 0 12px 0}
+
+    footer{padding:14px;text-align:center;color:var(--muted);font-size:13px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="header">
+        <div class="photo" title="Saiful's photo">
+          <!-- Ensure white_background.jpg is in same folder as index.html -->
+          <img src="white_background.jpg" alt="Sk. Md. Saiful Alam">
+        </div>
+        <div class="head-info">
+          <h1 class="name">Sk. Md. Saiful Alam</h1>
+          <div class="role">SQA Engineer</div>
+          <div class="contact">
+            <span>Email: <a href="mailto:sahimalam96@gmail.com">sahimalam96@gmail.com</a></span> ·
+            <span>Phone: +8801672412645</span>
+            <div style="margin-top:6px">
+              <a class="btn btn-primary" href="Sk_Md_Saiful_Alam_Resume.pdf" target="_blank">Download Resume</a>
+              <a class="btn btn-outline" href="https://github.com/saifulsahim" target="_blank">GitHub</a>
+              <a class="btn btn-outline" href="https://www.linkedin.com/in/saifulsahim/" target="_blank">LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <main>
+        <div>
+          <section id="summary">
+            <h2>Summary</h2>
+            <p class="lead">Detail-oriented Software QA Engineer with 3+ years of experience in manual and automated testing for mobile and web applications. Skilled in designing test strategies, identifying defects, and collaborating with cross-functional teams to ensure seamless user experiences. Proven track record in testing high-scale applications (10M+ users) and improving release stability through effective QA practices.</p>
+          </section>
+
+          <section id="projects">
+            <h2>Selected Experience</h2>
+
+            <div class="job">
+              <h3>SQA Engineer — Portonics Limited (Remote, Dhaka)</h3>
+              <div class="meta"><em>Oct 2024 – Present</em></div>
+              <p class="lead">Performed end-to-end testing of ATOM Store app (Top-Up, Pack Purchase, Roaming, In-app Games). API testing with Postman, regression & sanity tests, TestRail for cases, Jira & Kibana for bug tracking and logs.</p>
+            </div>
+
+            <div class="job">
+              <h3>SQA Engineer — Bit Mascot (Pvt) Ltd (Dhaka)</h3>
+              <div class="meta"><em>May 2023 – Sep 2024</em></div>
+              <p class="lead">Tested Eventbookings web & mobile platforms, designed test plans, reported bugs in Jira, performed API testing, and participated in Agile ceremonies.</p>
+            </div>
+
+            <div class="job">
+              <h3>Software Engineer — Tappware Solutions Ltd (Dhaka)</h3>
+              <div class="meta"><em>Aug 2020 – Sep 2021</em></div>
+              <p class="lead">Worked on Govt. E-nothi (CakePHP, jQuery, AJAX). Developed features, integrated APIs, fixed bugs, and updated client-requested features.</p>
+            </div>
+
+            <div class="job">
+              <h3>SQA Engineer — Tappware Solutions Ltd (Dhaka)</h3>
+              <div class="meta"><em>Sep 2019 – Jul 2020</em></div>
+              <p class="lead">Quality assurance for E-nothi web & mobile, created test cases, tracked and reported defects, collaborated with devs for stability improvements.</p>
+            </div>
+
+          </section>
+
+          <section id="education">
+            <h2>Education</h2>
+            <p><strong>B.Sc. in Computer Science & Engineering</strong> — International Islamic University Chittagong (2014 – 2019), GPA: 3.38</p>
+            <p><strong>HSC (Science)</strong> — Govt. City College, Chattogram (2011 – 2013), GPA: 5.00</p>
+            <p><strong>SSC (Science)</strong> — Khaja Ajmeri High School, Chattogram (2009 – 2011), GPA: 5.00</p>
+          </section>
+        </div>
+
+        <aside>
+          <div class="aside-card">
+            <h2>Skills</h2>
+            <dl>
+              <dt>Languages & Frameworks</dt>
+              <dd>Java · PHP · C</dd>
+
+              <dt>Databases</dt>
+              <dd>MySQL</dd>
+
+              <dt>Testing Tools</dt>
+              <dd>Selenium · Appium · Postman · TestRail · Jira · Kibana</dd>
+
+              <dt>Testing Types</dt>
+              <dd>Manual · Regression · UI · API · Sanity · Smoke · UAT</dd>
+
+              <dt>Version Control / CI</dt>
+              <dd>Git · GitHub Actions</dd>
+
+              <dt>Other</dt>
+              <dd>Requirement Analysis · Analytical Skills</dd>
+            </dl>
+            <div style="margin-top:8px">
+              <a class="btn btn-outline" href="mailto:sahimalam96@gmail.com">Email</a>
+            </div>
+          </div>
+        </aside>
+      </main>
+
+      <footer>
+        <small>© 2025 Sk. Md. Saiful Alam — Portfolio</small>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
