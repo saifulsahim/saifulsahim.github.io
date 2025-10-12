@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio - Saiful Sahim</title>
+  <title>Sk. Md. Saiful Alam - SQA Engineer</title>
   <style>
-    /* Basic Reset */
     * {
       margin: 0;
       padding: 0;
@@ -13,281 +13,516 @@
     }
 
     body {
-      font-family: Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+      background: #ffffff;
+      color: #24292f;
       line-height: 1.6;
-      background: #f9f9f9;
-      color: #333;
-      max-width: 1100px;
-      margin: auto;
-      padding: 20px;
+      min-height: 100vh;
     }
 
-    /* Header */
-    header {
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    .header {
+      background: #f6f8fa;
+      border-radius: 16px;
+      padding: 50px;
       text-align: center;
-      margin-bottom: 30px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      border: 1px solid #d0d7de;
+      margin-bottom: 40px;
+      position: relative;
+      overflow: hidden;
     }
 
-    header img {
-      width: 120px;
-      height: 120px;
+    .header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #0969da, #8250df, #bf3989);
+    }
+
+    .profile-img {
+      width: 300px;
+      /* 150px থেকে 200px */
+      height: 300px;
+      /* 150px থেকে 200px */
       border-radius: 50%;
-      margin-bottom: 15px;
+      border: 4px solid #0969da;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 20px rgba(9, 105, 218, 0.2);
       object-fit: cover;
-      border: 3px solid #ddd;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    header h1 {
-      font-size: 2rem;
-      margin-bottom: 5px;
-    }
-
-    header p {
-      font-size: 1.1rem;
-      color: #666;
+    h1 {
+      font-size: 2.5em;
+      color: #24292f;
       margin-bottom: 10px;
+      background: linear-gradient(135deg, #0969da, #8250df);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
-    .header-links {
-      margin-top: 10px;
-    }
-
-    .header-links a {
-      margin: 0 8px;
-      text-decoration: none;
-      color: #333;
-      border: 1px solid #333;
-      padding: 6px 12px;
-      border-radius: 5px;
-      font-size: 0.9rem;
-      transition: 0.3s;
-    }
-
-    .header-links a:hover {
-      background: #333;
-      color: #fff;
-    }
-
-    /* Main Layout */
-    main {
-      display: flex;
-      gap: 20px;
-      align-items: flex-start;
-    }
-
-    .content {
-      flex: 2;
-    }
-
-    aside {
-      flex: 1;
-    }
-
-    /* Sections */
-    section {
-      margin-bottom: 25px;
-    }
-
-    h2 {
-      margin-bottom: 10px;
-      color: #222;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 5px;
-    }
-
-    .job, .edu {
+    .title {
+      font-size: 1.3em;
+      color: #57606a;
       margin-bottom: 20px;
     }
 
-    .job h3, .edu h3 {
-      margin-bottom: 5px;
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
     }
 
-    .meta {
-      font-size: 0.9rem;
-      color: #666;
-      margin-bottom: 8px;
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #57606a;
+      font-size: 0.95em;
     }
 
-    /* Sidebar */
-    .aside-card {
-      background: #fff;
-      padding: 15px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-
-    .aside-card h2 {
-      margin-bottom: 12px;
-    }
-
-    .aside-card dt {
-      font-weight: bold;
-      margin-top: 10px;
-    }
-
-    .aside-card dd {
-      margin-left: 15px;
-      margin-bottom: 5px;
-      color: #444;
-    }
-
-    /* Buttons */
-    .btn {
-      display: inline-block;
-      padding: 8px 14px;
-      border-radius: 5px;
+    .contact-item a {
+      color: #0969da;
       text-decoration: none;
-      font-size: 0.95rem;
+      transition: color 0.3s;
     }
 
-    .btn-outline {
-      border: 1px solid #333;
-      color: #333;
-      background: transparent;
-      transition: 0.3s;
+    .contact-item a:hover {
+      color: #0550ae;
+      text-decoration: underline;
     }
 
-    .btn-outline:hover {
-      background: #333;
-      color: #fff;
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
     }
 
-    /* Footer */
+    .btn {
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s;
+      border: 1px solid;
+      cursor: pointer;
+      font-size: 0.95em;
+    }
+
+    .btn-primary {
+      background: #1f883d;
+      color: white;
+      border-color: #1a7f37;
+    }
+
+    .btn-primary:hover {
+      background: #1a7f37;
+      box-shadow: 0 4px 12px rgba(31, 136, 61, 0.3);
+    }
+
+    .btn-secondary {
+      background: white;
+      color: #0969da;
+      border-color: #0969da;
+    }
+
+    .btn-secondary:hover {
+      background: #ddf4ff;
+      box-shadow: 0 4px 12px rgba(9, 105, 218, 0.2);
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .section {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 30px;
+      border: 1px solid #d0d7de;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+
+    .section h2 {
+      color: #24292f;
+      font-size: 1.8em;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #f6f8fa;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section h2::before {
+      content: '';
+      width: 4px;
+      height: 24px;
+      background: linear-gradient(135deg, #0969da, #8250df);
+      border-radius: 2px;
+    }
+
+    .summary {
+      color: #24292f;
+      line-height: 1.8;
+      margin-bottom: 30px;
+    }
+
+    .experience-item {
+      margin-bottom: 30px;
+      padding-bottom: 25px;
+      border-bottom: 1px solid #f6f8fa;
+    }
+
+    .experience-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .experience-header {
+      margin-bottom: 15px;
+    }
+
+    .experience-title {
+      color: #24292f;
+      font-size: 1.2em;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .experience-date {
+      color: #57606a;
+      font-size: 0.9em;
+      font-style: italic;
+    }
+
+    .experience-item ul {
+      list-style: none;
+      margin-left: 0;
+    }
+
+    .experience-item li {
+      padding-left: 25px;
+      position: relative;
+      margin-bottom: 8px;
+      color: #24292f;
+    }
+
+    .experience-item li::before {
+      content: '▹';
+      position: absolute;
+      left: 0;
+      color: #0969da;
+      font-size: 1.2em;
+    }
+
+    .education-item {
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #f6f8fa;
+    }
+
+    .education-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .education-title {
+      color: #24292f;
+      font-size: 1.1em;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .education-school {
+      color: #57606a;
+      font-size: 0.95em;
+    }
+
+    .skills-category {
+      margin-bottom: 25px;
+    }
+
+    .skills-category:last-child {
+      margin-bottom: 0;
+    }
+
+    .skills-category h3 {
+      color: #24292f;
+      font-size: 1.1em;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .skill-tag {
+      background: linear-gradient(135deg, #0969da, #0550ae);
+      color: white;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.85em;
+      font-weight: 500;
+      box-shadow: 0 2px 8px rgba(9, 105, 218, 0.2);
+      transition: all 0.3s;
+    }
+
+    .skill-tag:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(9, 105, 218, 0.4);
+    }
+
     footer {
       text-align: center;
-      margin-top: 30px;
-      font-size: 0.9rem;
-      color: #777;
+      margin-top: 50px;
+      padding: 20px;
+      color: #57606a;
+      font-size: 0.9em;
     }
 
-    /* Responsive */
-    @media (max-width: 860px) {
-      main {
-        flex-direction: column;
+    @media (max-width: 968px) {
+      .content {
+        grid-template-columns: 1fr;
       }
+    }
+
+    @media (max-width: 640px) {
+      .header {
+        padding: 30px 20px;
+      }
+
+      h1 {
+        font-size: 2em;
+      }
+
+      .contact-info {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .section {
+        padding: 20px;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .section {
+      animation: fadeIn 0.6s ease-out;
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <!-- তোমার প্রোফাইল ছবি -->
-    <img src="white_background.jpg" alt="Profile Picture">
-    <h1>Sk. Md. Saiful Alam</h1>
-    <p>SQA Engineer</p>
-    <p>Email: <a href="mailto:sahimalam96@gmail.com">sahimalam96@gmail.com</a> · Phone: +8801672412645</p>
-    <div class="header-links">
-      <a href="Sk_Md_Saiful_Alam_Resume.pdf">Download Resume</a>
-      <a href="https://github.com/saifulsahim">GitHub</a>
-      <a href="https://www.linkedin.com/in/saifulsahim/">LinkedIn</a>
-    </div>
-  </header>
+  <div class="container">
+    <div class="header">
+      <img src="white_background.jpg" alt="Sk. Md. Saiful Alam" class="profile-img">
+      <h1>Sk. Md. Saiful Alam</h1>
+      <p class="title">🎯 SQA Engineer</p>
 
-  <main>
-    <!-- Left Content -->
-    <div class="content">
-      <section id="summary">
-        <h2>Summary</h2>
-        <p>
-          Detail-oriented Software QA Engineer with 3+ years of experience in manual and automated testing for mobile and web applications. Skilled in designing test strategies, identifying defects, and collaborating with cross-functional teams to ensure seamless user experiences. Proven track record in testing high-scale applications (10M+ users) and improving release stability through effective QA practices.
-        </p>
-      </section>
-
-      <section id="experience">
-        <h2>Selected Experience</h2>
-
-        <div class="job">
-          <h3>SQA Engineer — Portonics Limited (Remote, Dhaka)</h3>
-          <div class="meta"><em>Oct 2024 – Present</em></div>
-          <ul>
-            <li>Performed end-to-end testing of ATOM Store app (Top-Up, Pack Purchase, Roaming, In-app Games)</li>
-            <li>Conducted API testing with Postman</li>
-            <li>Ran regression & sanity tests</li>
-            <li>Managed test cases in TestRail</li>
-            <li>Tracked bugs using Jira & Kibana</li>
-          </ul>
+      <div class="contact-info">
+        <div class="contact-item">
+          📧 <a href="mailto:sahimalam96@gmail.com">sahimalam96@gmail.com</a>
         </div>
-
-        <div class="job">
-          <h3>SQA Engineer — Bit Mascot (Pvt) Ltd (Dhaka)</h3>
-          <div class="meta"><em>May 2023 – Sep 2024</em></div>
-          <ul>
-            <li>Tested Eventbookings web & mobile platforms</li>
-            <li>Designed and executed test plans</li>
-            <li>Reported bugs in Jira</li>
-            <li>Performed API testing</li>
-            <li>Participated in Agile ceremonies</li>
-          </ul>
-        </div>
-        <div class="job">
-          <h3>Software Engineer — Tappware Solutions Ltd (Dhaka)</h3>
-          <div class="meta"><em>Aug 2020 – Sep 2021</em></div>
-          <ul>
-            <li>Developed and maintained features in Govt. E-nothi project (CakePHP, jQuery, AJAX).</li>
-            <li>Fixed bugs and integrated APIs with frontend modules.</li>
-            <li>Updated features based on client requirements.</li>
-          </ul>
-        </div>
-        <div class="job">
-          <h3>SQA Engineer — Tappware Solutions Ltd (Dhaka)</h3>
-          <div class="meta"><em>Sep 2019 – Jul 2020</em></div>
-          <ul>
-            <li>Ensured quality of E-nothi web & mobile app by tracking and reporting defects.</li>
-            <li>Created detailed test cases, use cases, and defect reports.</li>
-            <li>Collaborated with developers for defect resolution and stability improvements.</li>
-          </ul>
-        </div>
-      </section>
-
-      <section id="education">
-        <h2>Education</h2>
-        <div class="edu">
-          <h3>B.Sc. in Computer Science & Engineering</h3>
-          <p>International Islamic University Chittagong (IIUC) — 2014 – 2019</p>
-        </div>
-        <div class="edu">
-          <h3>HSC (Science)</h3>
-          <p>Govt. City College, Chattogram — 2011 – 2013</p>
-        </div>
-        <div class="edu">
-          <h3>B.Sc. in Computer Science & Engineering</h3>
-          <p>Khaja Ajmeri High School, Chattogram — 2009 – 2011</p>
-        </div>
-      </section>
-    </div>
-
-    <!-- Right Sidebar -->
-    <aside>
-      <div class="aside-card">
-        <h2>Skills</h2>
-        <dl>
-          <dt>Languages & Frameworks</dt>
-          <dd>Java · PHP · C</dd>
-
-          <dt>Databases</dt>
-          <dd>MySQL</dd>
-
-          <dt>Testing Tools</dt>
-          <dd>Selenium · Appium · Postman · TestRail · Jira · Kibana</dd>
-
-          <dt>Testing Types</dt>
-          <dd>Manual · Regression · UI · API · Sanity · Smoke · UAT</dd>
-
-          <dt>Version Control / CI</dt>
-          <dd>Git</dd>
-
-          <dt>Other</dt>
-          <dd>Requirement Analysis · Analytical Skills</dd>
-        </dl>
-        <div style="margin-top:8px">
-          <a class="btn btn-outline" href="mailto:sahimalam96@gmail.com">Email</a>
+        <div class="contact-item">
+          📱 +8801672412645
         </div>
       </div>
-    </aside>
-  </main>
 
-  <footer>
-    <p>© 2025 Saiful Sahim</p>
-  </footer>
+      <div class="buttons">
+        <a href="Sk_Md_Saiful_Alam_Resume.pdf" class="btn btn-primary">📥 Download Resume</a>
+        <a href="https://github.com/saifulsahim" class="btn btn-secondary">🔗 GitHub</a>
+        <a href="https://www.linkedin.com/in/saifulsahim/" class="btn btn-secondary">💼 LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="content">
+      <div class="main-content">
+        <div class="section">
+          <h2>📝 Summary</h2>
+          <p class="summary">
+            Detail-oriented Software QA Engineer with 3+ years of experience in manual and automated testing for mobile
+            and web applications. Skilled in designing test strategies, identifying defects, and collaborating with
+            cross-functional teams to ensure seamless user experiences. Proven track record in testing high-scale
+            applications (10M+ users) and improving release stability through effective QA practices.
+          </p>
+        </div>
+
+        <div class="section">
+          <h2>💼 Experience</h2>
+
+          <div class="experience-item">
+            <div class="experience-header">
+              <div class="experience-title">SQA Engineer — Portonics Limited</div>
+              <div class="experience-date">Oct 2024 – Present | Remote, Dhaka</div>
+            </div>
+            <ul>
+              <li>Performed end-to-end testing of ATOM Store app (Top-Up, Pack Purchase, Roaming, In-app Games)</li>
+              <li>Conducted API testing with Postman</li>
+              <li>Ran regression & sanity tests</li>
+              <li>Managed test cases in TestRail</li>
+              <li>Tracked bugs using Jira & Kibana</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <div class="experience-header">
+              <div class="experience-title">SQA Engineer — Bit Mascot (Pvt) Ltd</div>
+              <div class="experience-date">May 2023 – Sep 2024 | Dhaka</div>
+            </div>
+            <ul>
+              <li>Tested Eventbookings web & mobile platforms</li>
+              <li>Designed and executed test plans</li>
+              <li>Reported bugs in Jira</li>
+              <li>Performed API testing</li>
+              <li>Participated in Agile ceremonies</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <div class="experience-header">
+              <div class="experience-title">Software Engineer — Tappware Solutions Ltd</div>
+              <div class="experience-date">Aug 2020 – Sep 2021 | Dhaka</div>
+            </div>
+            <ul>
+              <li>Developed and maintained features in Govt. E-nothi project (CakePHP, jQuery, AJAX)</li>
+              <li>Fixed bugs and integrated APIs with frontend modules</li>
+              <li>Updated features based on client requirements</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <div class="experience-header">
+              <div class="experience-title">SQA Engineer — Tappware Solutions Ltd</div>
+              <div class="experience-date">Sep 2019 – Jul 2020 | Dhaka</div>
+            </div>
+            <ul>
+              <li>Ensured quality of E-nothi web & mobile app by tracking and reporting defects</li>
+              <li>Created detailed test cases, use cases, and defect reports</li>
+              <li>Collaborated with developers for defect resolution and stability improvements</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2>🎓 Education</h2>
+
+          <div class="education-item">
+            <div class="education-title">B.Sc. in Computer Science & Engineering</div>
+            <div class="education-school">International Islamic University Chittagong (IIUC) — 2014 – 2019</div>
+          </div>
+
+          <div class="education-item">
+            <div class="education-title">HSC (Science)</div>
+            <div class="education-school">Govt. City College, Chattogram — 2011 – 2013</div>
+          </div>
+
+          <div class="education-item">
+            <div class="education-title">SSC (Science)</div>
+            <div class="education-school">Khaja Ajmeri High School, Chattogram — 2009 – 2011</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar">
+        <div class="section">
+          <h2>🛠️ Skills</h2>
+
+          <div class="skills-category">
+            <h3>💻 Languages & Frameworks</h3>
+            <div class="skills-list">
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">PHP</span>
+              <span class="skill-tag">C</span>
+            </div>
+          </div>
+
+          <div class="skills-category">
+            <h3>🗄️ Databases</h3>
+            <div class="skills-list">
+              <span class="skill-tag">MySQL</span>
+            </div>
+          </div>
+
+          <div class="skills-category">
+            <h3>🧪 Testing Tools</h3>
+            <div class="skills-list">
+              <span class="skill-tag">Selenium</span>
+              <span class="skill-tag">Appium</span>
+              <span class="skill-tag">Postman</span>
+              <span class="skill-tag">TestRail</span>
+              <span class="skill-tag">Jira</span>
+              <span class="skill-tag">Kibana</span>
+            </div>
+          </div>
+
+          <div class="skills-category">
+            <h3>🔍 Testing Types</h3>
+            <div class="skills-list">
+              <span class="skill-tag">Manual</span>
+              <span class="skill-tag">Regression</span>
+              <span class="skill-tag">UI</span>
+              <span class="skill-tag">API</span>
+              <span class="skill-tag">Sanity</span>
+              <span class="skill-tag">Smoke</span>
+              <span class="skill-tag">UAT</span>
+            </div>
+          </div>
+
+          <div class="skills-category">
+            <h3>🔧 Version Control / CI</h3>
+            <div class="skills-list">
+              <span class="skill-tag">Git</span>
+            </div>
+          </div>
+
+          <div class="skills-category">
+            <h3>📊 Other</h3>
+            <div class="skills-list">
+              <span class="skill-tag">Requirement Analysis</span>
+              <span class="skill-tag">Analytical Skills</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2025 Saiful Sahim</p>
+    </footer>
+  </div>
 </body>
+
 </html>
